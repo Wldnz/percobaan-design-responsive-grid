@@ -1,6 +1,18 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
     // alert('AS')
+    if(showHamburger){
+        buttonHamburger.classList.remove('hamburger');
+        buttonHamburger.classList.add('closeHamburger');
+        hamburgerText.textContent = 'X';
+        hamburgerMenu.style.display = 'flex'
+        showHamburger = false
+    }else{
+        buttonHamburger.classList.remove('closeHamburger');
+        buttonHamburger.classList.add('hamburger');
+        hamburgerText.textContent = '-';
+        showHamburger = true;
+    }
     
     const buttonHamburger = document.getElementById('buttonHamburger');
     const hamburgerMenu = document.getElementById('hamburgerMenu')
@@ -24,16 +36,4 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
 
    })
-    if(showHamburger){
-        buttonHamburger.classList.remove('hamburger');
-        buttonHamburger.classList.add('closeHamburger');
-        hamburgerText.textContent = 'X';
-        hamburgerMenu.style.display = 'flex'
-        showHamburger = false
-    }else{
-        buttonHamburger.classList.remove('closeHamburger');
-        buttonHamburger.classList.add('hamburger');
-        hamburgerText.textContent = '-';
-        showHamburger = true;
-    }
 })
