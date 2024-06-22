@@ -1,39 +1,20 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
-    // alert('AS')
-    if(showHamburger){
-        buttonHamburger.classList.remove('hamburger');
-        buttonHamburger.classList.add('closeHamburger');
-        hamburgerText.textContent = 'X';
-        hamburgerMenu.style.display = 'flex'
-        showHamburger = false
-    }else{
-        buttonHamburger.classList.remove('closeHamburger');
-        buttonHamburger.classList.add('hamburger');
-        hamburgerText.textContent = '-';
-        showHamburger = true;
-    }
-    
-    const buttonHamburger = document.getElementById('buttonHamburger');
-    const hamburgerMenu = document.getElementById('hamburgerMenu')
-    const hamburgerText =  buttonHamburger.firstElementChild;
-    let showHamburger = false;
+    const menuHamburger = document.getElementById("menuHamburger");
+    const navHamburger = document.getElementById("navHamburger");
 
-   buttonHamburger.addEventListener('click',()=>{
-    console.log(showHamburger)
-    if(showHamburger){
-        buttonHamburger.classList.remove('hamburger');
-        buttonHamburger.classList.add('closeHamburger');
-        hamburgerText.textContent = 'X';
-        hamburgerMenu.style.display = 'flex'
-        showHamburger = false
-    }else{
-        buttonHamburger.classList.remove('closeHamburger');
-        buttonHamburger.classList.add('hamburger');
-        hamburgerText.textContent = '-';
-        hamburgerMenu.style.display = 'none'
-        showHamburger = true;
-    }
+    let isShowMenu = false
 
-   })
+    menuHamburger.addEventListener('click', () =>{
+        if (isShowMenu){
+            menuHamburger.style.rotate = "360deg";
+            navHamburger.style.display = "none";
+            isShowMenu = false; 
+        }else{
+            menuHamburger.style.rotate = "180deg";
+            navHamburger.style.display = "flex";
+            isShowMenu = true;
+        }
+    })
+
 })
