@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 9;
+}
+
+body{
+    font-size: 18px;
+    background-color: black;
+}
+
+.container {
+    display: grid;
+}
+
+/* header{
+    background-color: red;
+}
+ */
+
+
+header nav{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minMax(100px,1fr));
+    align-items: center;
+    height: 80px;
+}
+header nav img{
+    display: block;
+    grid-column-start: -1;
+    /* transform: rotate(180deg); */
+    cursor: pointer;
+    display: none;
+}
+
+.closeHamburger{
+    transform: rotate(180deg);
+}
+
+header nav ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minMax(0,1fr)) ;
+
+    list-style-type: none;
+    /* background-color: rgb(134, 57, 57); */
+}
+
+header nav ul li a{
+    color: black;
+    text-decoration: none;
+    /* background-color: aqua; */
+}
+
+header .hero{
+    background-image: url(./Image/TvHero.png);
+    background-size: cover;
+    background-position: start;
+    width: 99%;
+    height: 800px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 10px auto;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+header .hero .subText{
+    /* background-color: black; */
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    /* padding: 20px; */
+    /* margin: 10px; */
+}
+header .hero .subText h2{
+    font-size: 4em;
+    width: 98%;
+    /* margin: auto    ; */
+}
+header .hero .subText p{
+    width: 80%;
+    font-size: 2em;
+}
+header .hero .subText button{
+    font-size: 3em;
+    border-radius: 10px;
+}
+header .hero .subText button a{
+    text-decoration: none;
+    /* color: black; */
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.container .pendukungBox{
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,400px);
+    /* grid-template-rows: repeat(auto-fit,minMax(0,1fr)); */
+    /* align-content: center; */
+    place-items: center;
+    gap: 20px;
+}
+
+.container .pendukungBox .title{
+    grid-column: 1 / -1 ;
+    display: grid;
+    place-items: center;
+}
+
+.container .pendukungBox .title h2{
+    font-size: 2.8em;
+    width: 70%;
+}
+
+.container .pendukungBox .kualitas{
+    /* grid-column: 1 / -1; */
+    background-color: white;
+    color: black;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    width: 400px;
+    padding: 5px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.container .pendukungBox .kualitas h4{
+    /* grid-area: text; */
+    width: 60%;
+    padding: 5px;
+    font-size: 2em;
+}
+
+
+.container .pendukungBox .kualitas img{
+    /* grid-area: image; */
+    grid-column: -1 ;
+    /* padding: 5px; */
+    /* padding: 0; */
+    height: 80px;
+}
+
+.container .pendukungBox .kualitas p{
+    padding: 10px;
+}
+
+/* break point media query */
+
+@media (max-width:600px){
+    header nav img{
+        grid-column-start: -1;
+        display: block;
+        padding: 20px;
+        height: 40px;
+    }
+    header nav ul{
+        grid-column-start: -1;
+        background-color: white;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 2em;
+        gap: 29px;
+        width: 100%;
+        transform: translateX(-20%);
+        padding-top: 30px;
+        padding-bottom: 200px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    header nav ul li a{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    header .hero .subText h2{
+        font-size: 2em;
+        padding: 0;
+    }
+    .container .pendukungBox{
+        place-items: start;
+    }
+
+    .container .pendukungBox .kualitas{
+       /* grid-column: 1 / -1; */
+       width: 100%;
+    }
+
+}
