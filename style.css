@@ -12,10 +12,10 @@ body{
     display: grid;
 }
 
-header{
+/* header{
     background-color: red;
 }
-
+ */
 
 
 header nav{
@@ -99,7 +99,6 @@ header .hero .subText button a{
 }
 
 .container .pendukungBox{
-    background-color: blue;
     color: white;
     padding: 20px;
     display: grid;
